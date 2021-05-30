@@ -1,0 +1,57 @@
+<div class="centering">
+  <mat-card class="reg-card">
+    <form [formGroup] = "form" (submit)="onSave()">
+      <input type="hidden" name="fireID" formArrayName="identifier">
+      <h3>Request Form</h3>
+      <mat-form-field class="max-width">
+        <mat-label>Identifier</mat-label>
+        <input matInput type="text" name="ID" placeholder="InsulinePump XCZ55" formArrayName="identifier">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Status</mat-label>
+        <input matInput type="text" name="status" placeholder="active" formControlName="status">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Intent</mat-label>
+        <input matInput type="text" name="intent" placeholder="directive"  required formControlName="intent">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Priority</mat-label>
+        <input matInput type="text" name="priority" placeholder="stat" formControlName="priority">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Subject</mat-label>
+        <input matInput type="text" name="subject" placeholder="Patient 206" required formControlName="subject" >
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Code</mat-label>
+        <input matInput type="text" name="codeCodeableConcept" placeholder="0345" required
+          formControlName="codeCodeableConcept">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Authored On</mat-label>
+        <input matInput type="text" name="authoredOn" placeholder="2020-10-30" formControlName="authoredOn">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Note</mat-label>
+        <input matInput type="text" name="note" placeholder="usual" formControlName="note">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Relevant History</mat-label>
+        <input matInput type="text" name="relevantHistory" placeholder="NA" formControlName="relevantHistory">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Insurance</mat-label>
+        <input matInput type="text" name="insurance" placeholder="GK-1001" formControlName="insurance">
+      </mat-form-field>
+      <mat-form-field class="max-width">
+        <mat-label>Occurrence Date</mat-label>
+        <input matInput type="text" name="occurrenceDateTime" placeholder="2020-12-01"
+          formControlName="occurrenceDateTime">
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" class="max-width" [disabled]="form.invalid">Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

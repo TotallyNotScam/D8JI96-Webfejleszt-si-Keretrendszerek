@@ -1,0 +1,33 @@
+<table class="table table-hover">
+  <thead>
+    <th>Identifier</th>
+    <th>Status</th>
+    <th>Intent</th>
+    <th>Priority</th>
+    <th>Subject</th>
+    <th>Code</th>
+    <th>Authored On</th>
+    <th>Note</th>
+    <th>Relevant History</th>
+    <th>Insurance</th>
+    <th>Occurrence Date</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of list">
+      <td (click)="onEdit(emp)">{{emp.identifier}}</td>
+      <td (click)="onEdit(emp)"> {{emp.status}}</td>
+      <td (click)="onEdit(emp)"> {{emp.intent}}</td>
+      <td (click)="onEdit(emp)"> {{emp.priority}}</td>
+      <td (click)="onEdit(emp)"> {{emp.subject}}</td>
+      <td (click)="onEdit(emp)"> {{emp.codeCodeableConcept}}</td>
+      <td (click)="onEdit(emp)"> {{emp.authoredOn}}</td>
+      <td (click)="onEdit(emp)"> {{emp.note}}</td>
+      <td (click)="onEdit(emp)">{{emp.relevantHistory}}</td>
+      <td (click)="onEdit(emp)">{{emp.insurance}}</td>
+      <td (click)="onEdit(emp)"> {{emp.occurrenceDateTime}}</td>
+      <td><a class="btn text-danger" (click)="onDelete(emp)"><i class="fa fa-trash"></i></a></td>
+    </tr>
+
+  </tbody>
+</table>
